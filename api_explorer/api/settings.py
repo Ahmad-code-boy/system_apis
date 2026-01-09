@@ -82,7 +82,33 @@ def get_invoice_data():
         "items": items,
         "total": doc.grand_total
     }
+@frappe.whitelist(allow_guest=True)
+def create_custom_field_sales_invoice_item():
+    """
+    Create a custom field in Sales Invoice Item and assign to Module
+    """
 
+    # Define the custom field
+    field_config = {
+        "doctype": "Custom Field",
+        "dt": "Sales Invoice Item",          # Target DocType
+        "fieldname": "custom_extra_info",   # Internal name
+        "label": "Extra Information",       # Visible label
+        "fieldtype": "Text Editor",         # Field type
+        "insert_after": "item_name",        # Place after this field
+        "owner": "Administrator",
+        "module": "Accounts",               # Assign module
+    }
 
-
-            
+    # Check if field already exists
+    if not frappe.db.exists("Custom Field", {"dt": "Sales Invoice Item", "fieldname": "custom_extra_info"}):
+        try:
+            custom_field = frappe.get_doc(field_config)
+            custom_field.insert()
+            frappe.db.commit()
+            frappe.msgprint("✅ Custom field 'custom_extra_info' added to Sales Invoice Item under Accounts module.")
+        except Exception as e:
+            frappe.log_error(frappe.get_traceback(), "Failed to add custom field to Sales Invoice Item")
+            frappe.msgprint("❌ Failed to add custom field: " + str(e))
+    else:
+        frappe.msgprint("ℹ Custom field 'custom_extra_info' already exists in Sales Invoice Item.")

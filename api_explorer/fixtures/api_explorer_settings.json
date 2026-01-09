@@ -1,35 +1,37 @@
 [
  {
-  "doctype": "API Explorer Settings",
-  "name": "API Explorer Settings",
-  "title": "API Explorer Settings",
-  "enabled": 1,
-  "dark_mode": 0,
-  "font_family": "Poppins",
-  "custom_page_title": "API Explorer",
-  "custom_page_description": "Manage all methods at one place",
-  "show_public_apis": 1,
-  "show_internal_apis": 1,
-  "show_resource_apis": 1,
-  "show_scheduler_jobs": 1,
-  "enable_search": 1,
-  "enable_pagination": 1,
-  "items_per_page": 40,
-  "disable_api_testing": 0,
-  "log_all_api_calls": 0,
-  "maintain_user_history": 1,
-  "include_tokens_in_code": 1,
-  "show_formatted_response": 0,
-  "max_apis_per_app": 1000,
   "allowed_user_roles": [
    {
-    "doctype": "API Explorer Allowed Role",
-    "role": "Administrator",
+    "parent": "API Explorer Settings",
     "parentfield": "allowed_user_roles",
-    "parenttype": "API Explorer Settings"
+    "parenttype": "API Explorer Settings",
+    "role": "Administrator"
    }
   ],
+  "custom_page_description": "Manage all methods at one place",
+  "custom_page_title": "API Explorer",
+  "dark_mode": 0,
+  "disable_api_testing": 0,
+  "docstatus": 0,
+  "doctype": "API Explorer Settings",
+  "enable_pagination": 1,
+  "enable_search": 1,
+  "enabled": 1,
+  "excluded_api_methods": [],
   "excluded_apps": [],
-  "excluded_api_methods": []
+  "font_family": "Poppins",
+  "include_tokens_in_code": 1,
+  "items_per_page": 40,
+  "log_all_api_calls": 0,
+  "maintain_user_history": 1,
+  "max_apis_per_app": 1000,
+  "modified": "2026-01-09 12:21:15.887863",
+  "name": "API Explorer Settings",
+  "show_formatted_response": 0,
+  "show_internal_apis": 1,
+  "show_public_apis": 1,
+  "show_resource_apis": 1,
+  "show_scheduler_jobs": 1,
+  "title": "API Explorer Settings"
  }
 ]

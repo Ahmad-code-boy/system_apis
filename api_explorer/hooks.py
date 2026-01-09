@@ -11,6 +11,12 @@ fixtures = [
     {
         "doctype": "API Explorer Settings",
         "filters": [["name", "=", "API Explorer Settings"]]
+    },
+        {
+        "dt": "Custom Field",
+        "filters": [
+            ["dt", "=", "Sales Invoice Item"]
+        ]
     }
 ]
 
