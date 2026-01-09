@@ -1,0 +1,28 @@
+.invoice-wrapper {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.invoice-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.invoice-table th {
+    background-color: #f3f4f6;
+    text-align: center;
+    font-weight: 600;
+}
+
+.invoice-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.total-box {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+}
